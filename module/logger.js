@@ -8,9 +8,9 @@ events.on('error', payload => loggg('error', payload));
 
 function loggg(action, payload) {
 
-  console.log('ooops')
+  console.log('ooops');
   
   let message = `${action.toUpperCase()}`;
   console.log(message, payload);
 
-};
+}

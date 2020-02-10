@@ -8,7 +8,7 @@ require('./module/logger.js');
 const alterFile = (file) => {
   fs.readFile( file, (err, data) => {
     if(err) { 
-      events.emit('error', err)
+      events.emit('error', err);
     }
 
 
@@ -17,12 +17,12 @@ const alterFile = (file) => {
     
     fs.writeFile( file, Buffer.from(text), (err, data) => {
     
-        if(err) { 
+      if(err) { 
     
-            events.emit('error', err)
-       }
+        events.emit('error', err);
+      }
     
-       events.emit('success', `${file} Thanks it Saved.`)
+      events.emit('success', `${file} Thanks it Saved.`);
     });
   });
 };
